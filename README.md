@@ -1,62 +1,80 @@
-# Modern Application Development 2 - Project (Vehicle Parking App)
+# MAD2 Project – Full-Stack Vehicle Parking Management System
 
-##  Project Overview
-This is a **full-stack application** developed for the **Modern Application Development 2 (MAD2)** course. It simulates a vehicle parking management system where users can interact with a frontend UI and backend services to handle parking data and related processes.
+##  Overview
+This is a full-stack web application developed as part of **Modern Application Development 2 (MAD2)**.  
+The system simulates a vehicle parking management platform with a modern frontend, backend APIs, and asynchronous task processing.
 
-The project integrates a Vue.js frontend with a Python backend and uses Celery & Redis for task handling.
+The project demonstrates real-world full-stack architecture used in production systems.
+
+---
 
 ##  Key Features
-- Full frontend UI built with Vue.js
-- Backend API server in Python (Flask)
-- Asynchronous task processing with Celery
-- Redis for task queue management
+- Modern frontend built using Vue.js
+- Backend REST APIs using Python (Flask)
+- Asynchronous background task execution using Celery
+- Redis used as a message broker
+- Clean separation of frontend and backend services
+
+---
+
+##  System Architecture
+- **Frontend** communicates with backend APIs
+- **Backend** handles business logic and database operations
+- **Celery workers** process background tasks
+- **Redis** manages task queues
+
+---
 
 ##  Tech Stack
 | Layer | Technology |
-|-------|------------|
+|-----|-----------|
 | Frontend | Vue.js |
 | Backend | Python (Flask) |
-| Task Queue | Celery |
+| Async Tasks | Celery |
 | Message Broker | Redis |
+| Tools | Git, GitHub |
 
-## Repo Structure
+---
 
-├── backend/← Flask API & Celery workers
-├── frontend/← Vue.js web UI
-├── MAD2_Report.pdf/← Final course report
+##  Repository Structure
 
-## Setup & Run Instructions
-**Backend**
+MAD2-Project/
+│
+├── backend/          # Flask backend & Celery configuration
+├── frontend/         # Vue.js frontend application
+├── MAD2_Report.pdf   # Detailed project report
+└── README.md
+
+---
+
+## ⚙️ Setup Instructions
+
+### Backend Setup
 bash
 cd backend
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
-Then in separate terminals:
+Run services in separate terminals:
+
 redis-server
 celery -A main.celery worker --loglevel=info
 celery -A main.celery beat --loglevel=info
 python main.py
 
-Frontend
+Frontend Setup
+
 cd frontend
 npm install
 npm run dev
 
-
-📌 Project Highlights
-	•	Real-time task queue with Celery
-	•	Clean separation of frontend & backend
-	•	Practical exposure to modern full-stack workflows
+📌 Highlights
+	•	Implements asynchronous processing like real production systems
+	•	Demonstrates scalable backend architecture
+	•	Practical experience with task queues and message brokers
 
 🎯 What I Learned
-	•	How to orchestrate frontend and backend in a real project
-	•	Use of Redis and Celery for asynchronous operations
-	•	Deployment-ready architecture and task scheduling
-
-  
-
-
-
-
+	•	Designing end-to-end full-stack systems
+	•	Handling async workflows using Celery & Redis
+	•	Coordinating multiple services in a single application
