@@ -58,23 +58,27 @@ MAD2-Project/
 ##  Setup Instructions
 
 ### Backend Setup
-'''bash
-cd backend
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
+bash
+
+1. cd backend
+
+2. python -m venv venv
+
+3. source venv/bin/activate
+
+4. pip install -r requirements.txt
 
 Run services in separate terminals:
 
-redis-server
-celery -A main.celery worker --loglevel=info
-celery -A main.celery beat --loglevel=info
-python main.py
+1. redis-server
+2. celery -A main.celery worker --loglevel=info
+3. celery -A main.celery beat --loglevel=info
+4. python main.py
 
 Frontend Setup
-cd frontend
-npm install
-npm run dev
+1. cd frontend
+2. npm install
+3. npm run dev
 
 ---
 
