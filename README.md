@@ -54,44 +54,36 @@ MAD2-Project/
 
 ---
 
-## ⚙️ Setup Instructions
+
+##  Setup Instructions
 
 ### Backend Setup
-bash
-
+'''bash
 cd backend
-
 python -m venv venv
-
 source venv/bin/activate
-
 pip install -r requirements.txt
 
 Run services in separate terminals:
 
 redis-server
-
 celery -A main.celery worker --loglevel=info
-
 celery -A main.celery beat --loglevel=info
-
 python main.py
 
 Frontend Setup
-
 cd frontend
-
 npm install
-
 npm run dev
 
+---
 
 📌 Highlights
 	•	Implements asynchronous processing like real production systems
-		Demonstrates scalable backend architecture
-	    Practical experience with task queues and message brokers
+	•	Demonstrates scalable backend architecture
+	•	Practical experience with task queues and message brokers
 
 🎯 What I Learned
 	•	Designing end-to-end full-stack systems
-		Handling async workflows using Celery & Redis
-		Coordinating multiple services in a single application
+	•	Handling async workflows using Celery & Redis
+	•	Coordinating multiple services in a single application
