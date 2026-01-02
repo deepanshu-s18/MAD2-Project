@@ -21,9 +21,9 @@ The project integrates a Vue.js frontend with a Python backend and uses Celery &
 
 ## Repo Structure
 
-├── backend/                ← Flask API & Celery workers
-├── frontend/               ← Vue.js web UI
-├── MAD2_Report.pdf         ← Final course report
+├── backend/                   ← Flask API & Celery workers
+├── frontend/                  ← Vue.js web UI
+├── MAD2_Report.pdf            ← Final course report
 
 ## Setup & Run Instructions
 **Backend**
